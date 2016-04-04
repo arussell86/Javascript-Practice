@@ -1,0 +1,37 @@
+<! DOCTYPE html>
+<html>
+<head>
+
+		<title>Guessing Game</title>
+</head>
+<body>
+
+		<script>
+		
+		// Filename guessinggame.html
+		// Generate a random number between 1 and 100
+		// keeps getting guesses until the user is
+		// correct
+	
+		var compNum = Math.floor(Math.random()*100)+1;
+		var tries = 0;
+		alert("IT'S THE GUESSING GAME!");
+		alert("I am thinking of a number from 1 to 100");
+		do {
+			guess = prompt("What do you think the number is?");
+			if (guess < compNum) {
+			document.write(guess+" is too low! Try again");
+			document.write("<br>");
+		}
+		else if (guess > compNum) {
+			document.write(guess+" is too high! Try again");
+			document.write("<br>");
+	}
+			
+		tries++;
+	} while (guess != compNum)
+	alert ("You guessed the number in "+tries+" guesses!");
+	</script>
+	
+</body>
+</html>

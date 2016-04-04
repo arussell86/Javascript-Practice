@@ -1,0 +1,30 @@
+<! DOCTYPE html>
+<html>
+<head>
+	<title>Calculating the Area of a Circle</title>
+</head>
+<body>
+	<script>
+	
+	// Filename areacircle2.html
+	// program that calculates and prints the area
+	// of a circle and half circle
+	
+	var pi = 3.14159; // mathematical value of PI
+	// Ask the user for the size of the circle
+	var radius = prompt("What is the radius of the circle? ");
+	
+	// calculate the area of the whole circle
+	var area = pi * radius * radius;
+	
+	// Making these parts of the message to user strings
+	// both demonstrates strings and makes the alert fit 
+	// more cleanly on a single line.
+	
+	var message1 = "The area of a circle with a radius of ";
+	var message2 = " is "
+	alert(message1 + radius + message2 + area);
+
+	alert("The area of a half circle is " + area/2);
+	
+	</script>

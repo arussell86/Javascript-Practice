@@ -1,0 +1,34 @@
+<! DOCTYPE html>
+<html>
+<head>
+		<title>Ifbranch</title>
+</head>
+</body>
+
+		<script>
+		
+		// Filename ifbranch.hml
+		// program that decides how much of a bonus
+		// to pay a sales person
+		
+		// Get the name and sales of the salesperson
+		// error on line 29
+		var salesname = prompt("What is the name?");
+		var salestot = prompt("What were his or her sales?");
+		
+		if (salestot < 5000)
+		{
+			bonus = 0;
+			daysoff = 0;
+		}
+		else
+		{
+			bonus = 100;
+			daysOff = 2;
+		}
+		document.write(salsesname+" earned a bonus of $");
+		document.write(bonus+" as well as "+daysOff"); 
+		document.write(" Days Off<p>");
+		</script>
+</body>
+</html>

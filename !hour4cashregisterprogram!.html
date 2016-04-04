@@ -1,0 +1,50 @@
+<! DOCTYPE html>
+<html>
+<head>
+	<title>Fran's Place</title>
+</head>
+<body>
+
+	<script>
+	
+	// Filename: Storereg.html
+	// A more practical use of input and output
+	// Asks users for specific info on sold items
+	
+	document.write("Welcome to Fran's Place!<br>");
+	document.write("Let's proceed to checkout!<br><br>");
+	candy = prompt("How many candy bars did they buy?");
+	soda = prompt("How many cans of soda did they buy?");
+	gas = prompt("How many gallons of gas did they buy?");
+	
+	// This section will take each value and
+	// multiply it by the current cost per item
+	
+	candytotal = candy * 1.00;
+	sodatotal = soda * 	1.50;
+	gastotal = gas * 3.879;
+	
+	subtotal = candytotal + sodatotal + gastotal;
+	
+	//Don't forget sales tax! 7.25% in this example
+	tax = subtotal * .0725;
+	
+	receipt = "Item		Qnt		Total\n";
+	receipt += "------------------------------\n";
+	receipt += "Candy	" + candy + "  		$" + candytotal;
+	receipt += "\n";
+	receipt += "Soda	" + soda + "		$" + sodatotal;
+	receipt += "\n";
+	receipt += "Gas		" + gas + "			$" +gastotal;
+	receipt += "------------------------------\n";
+	receipt += "Subtotal	$" + subtotal;
+	receipt += "\nTax		$" + tax;
+	receipt += "\nTotal"	$" + (subtotal+tax);
+	receipt += "\n\nHAVE A GREAT DAY!\n";
+	
+	alert(receipt);
+	
+	</script>
+	
+</body>
+</html>
