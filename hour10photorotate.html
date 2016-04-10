@@ -1,0 +1,41 @@
+<! DOCTYPE html>
+<html>
+<head>
+		
+		<title>Halloween Photos</title>
+		<script>
+		
+		// First create an array of images to rotate
+		var halPhotos = new Array();
+		halPhotos[0] = new Image ();
+		halPhotos[0].src = "grimmisc1.jpg";
+		halPhotos[1] = new Image ();
+		halPhotos[1].src = "grimmisc2.jpg";
+		halPhotos[2] = new Image ();
+		halPhotos[2].src = "grimmisc3.jpg";
+		halPhotos[3] = new Image ();
+		halPhotos[3].src = "grimmisc4.jpg";
+		halPhotos[4] = new Image ();
+		halPhotos[4].src = "grimmisc5.jpg";
+		
+		var i=0;
+		function rotator() {
+				document.getElementById("grimmisc1").src = halPhotos[i].src;
+				i++;
+				if (i==halPhotos.length) {
+						i = 0;
+				
+				}
+				setTimeout(function() { rotator(); }, 2000);  
+		
+		}
+		
+		</script>
+</head>
+<body onload = "rotator('grimmisc1', halPhotos);" >
+<h1>Halloween Photos</h1>
+The Halloween Office Party 2012
+<div id="img"> <img id="grimmisc1" height="600px" width="400px"
+	border="5" style="border-color:white;" /></div>
+</body>
+</html>

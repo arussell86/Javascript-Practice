@@ -1,0 +1,44 @@
+<! DOCTYPE html>
+<html>
+<head>
+
+		<title>Sales Report</title>
+</head>
+<body>
+
+		<script>
+		
+		// Filename monthlysales.html
+		// program gets sales for each month
+		// and then prints out the monthly totals
+		var months = new Array(12);
+		var monthSales = new Array(12);
+		months[0] = "January";
+		months[1] = "February";
+		months[2] = "March";
+		months[3] = "April";
+		months[4] = "May";
+		months[5] = "June";
+		months[6] = "July";
+		months[7] = "August";
+		months[8] = "September";
+		months[9] = "October";
+		months[10] = "November";
+		months[11] = "December";
+		
+		for (i = 0; i < 12; i++)
+		{
+				checker = "What were the sales for the month of ";
+				checker += months[i];
+				monthSales[i] = prompt(checker);
+		
+		}
+		for (i = 0; i < 12; i++)
+		{
+				document.write(months[i]+"'s sales were $");
+				document.write(monthSales[i]+"<br>");
+		
+		}
+		</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<! DOCTYPE html>
+<html>
+<head>
+		<title>Bubble Sort</title>
+</head>
+<body>
+		<script>
+		
+		// Filename bubblesort.html
+		// uses the bubble sort algorithm to sort a 
+		// set of values
+		
+		var values = new Array(10, 54, 34, 21, 23);
+		var temp;
+		
+		// Outer loop
+		for (pass = 0; pass < 5; pass++)
+		{
+		// Inner Loop for comparisons
+		for (ctr = 0; ctr < 5; ctr++)
+		{
+		
+				if (values[ctr] > values [ctr+1]);
+				{
+				
+						temp = values[ctr];
+						values[ctr] = values[ctr+1];
+						values[ctr+1] = temp;
+						
+				}
+		}
+		
+		}
+		// After both loops,now print the sortes loop
+		
+		document.write("Here is the loop after sorting...<br>");
+		for (i = 0; i < 5; i++)
+		{
+				document.write(values[i]+"<br>");
+				
+		}
+		</script>
+</body>
+</html>
