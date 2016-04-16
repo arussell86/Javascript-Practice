@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>Welcome to  the Halloween store</title>
+
+<script>
+ // Set the scrolling message, and you can add as many pieces
+ // as you want
+ var scrollMsg = "We are open 24 10:00am-10:00pm";
+ scrollMsg += "We have the largest costume inventory";
+ scrollMsg += "in the world";
+ scrollMsg += "our costumes can vbe picked up in store or ordered online"
+ 
+ //Our five product information functions
+ function Picture1Info() {
+	alert("On sale until Halloween.");
+	}
+	function Picture2Info(){
+	alert("One of our best sellers.");
+	}
+	function Picture3Info() {
+	alert("Everyone could use this one.");
+	}
+	function Picture4Info() {
+	alert("One of my personal favorites.");
+	}
+	function Picture5Info() {
+	alert("multi-purpose for every office.");
+	}
+	
+//The scrolling function
+//error with line 33
+var beginPos = 0;
+function scrollingMsg() {
+document.msgForm.scrollingMsgBox.value = 
+scrollMsg.substring(beginPos,scrollMsg.length)+scrollMsg.substring(0,beginPos);
+beginPos = beginPos + 1;
+if (beginPos > scrollMsg.length) {
+beginPos = 0
+}
+window.setTimeout("scrollingMsg()",90)
+}
+
+</script>
+
+</head>
+<body BGCOLOR="WHITE" onload="scrollingMsg()">
+<h1>Halloween Store</h1>
+
+<img src ="grimmisc1.jpg" height="300px" width="200px"
+border ="5" style="border-color;blue;" onclick="Picture1Info()" /></div>
+<img src ="grimmisc2.jpg" height="300px" width="200px"
+border ="5" style="border-color;blue;" onclick="Picture2Info()" /></div>
+<img src ="grimmisc3.jpg" height="300px" width="200px"
+border ="5" style="border-color;blue;" onclick="Picture3Info()" /></div>
+<img src ="grimmisc4.jpg" height="300px" width="200px"
+border ="5" style="border-color;blue;" onclick="Picture4Info()" /></div>
+<img src ="grimmisc5.jpg" height="300px" width="200px"
+border ="5" style="border-color;blue;" onclick="Picture5Info()" /></div>
+<form name="msgForm"
+<input type="text" name="scrollingMsgBox" size"88">
+</form>
+
+<p>&nbsp;</p>
+<p><b>Thank you for shopping</b>.</p>
+</body>
+</html>
