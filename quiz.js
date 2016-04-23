@@ -3,7 +3,7 @@ var qn=0;
 
 // load the questions from the XML file
 function getQuestions() {
-	obj=document. getElementbyId("question");
+	obj=document. getElementById("question");
 	obj.firstChild.nodeValue="(please wait)";
 	ajaxRequest("questions.xml");
 	
@@ -26,19 +26,16 @@ function checkAnswer() {
 	answers = ajaxreq.responseXML,getElementByTagName("a");
 	a = answers[qn].firstChild.nodeValue;
 	answerfield = document.getElementById("answer");
-	if a == answerfield.value{
+	if( a == answerfield.value){
 		alert("Correct!");
 	}
-}
-
-else {
-	alert("Incorrect.The correct answer is: " + a);
+	else {
+		alert("Incorrect.The correct answer is: " + a);
 
 	}
 	qn = qn + 1;
 	answerfield.value="";
-	nextQuestion();
-	
+	nextQuestion();		
 }
 
 

@@ -1,12 +1,12 @@
 // global variables to keep track of the request
 // and the function to call when done
-var ajaxreq-false, ajaxCallback
+var ajaxreq_false, ajaxCallback
 
 // ajaxRequest: Sets up request
 function ajaxRequest(filename) {
 	try {
 	//Firefox / IE7 / Others
-	Ajaxreq= new XMLHttpRequest();
+	ajaxreq= new XMLHttpRequest();
 	} catch (error) {
 	try {
 	// IE 5/ IE6
@@ -23,7 +23,7 @@ function ajaxRequest(filename) {
 	
 	// ajaxResponse: Waits for response and calls a function
 	function ajaxResponse() {
-	if (ajaxreq.readyState !=4} return;
+	if (ajaxreq.readyState !=4) return;
 	if (ajaxreq.status==200) {
 		// if the request succeeded...
 		if (ajaxCallback) ajaxCallBACK();
